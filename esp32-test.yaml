@@ -13,30 +13,27 @@ esp32:
   framework:
     type: esp-idf
 
-# Enable logging
 logger:
 
-# Enable Home Assistant API
 api:
   encryption:
-    key: "GwtvNper5a+QXfXMjvi5iltDvLN0EH0CBywrT6zeUPQ="
+    key: "***"
 
 ota:
   - platform: esphome
-    password: "af1ea54c8b8d7ec702761c9f1a92f72a"
+    password: "***"
 
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   manual_ip:
-    static_ip: 192.168.10.127
-    gateway: 192.168.10.254
-    subnet: 255.255.255.0
+    static_ip: ***
+    gateway: ***
+    subnet: ***
 
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Esp32-Test Fallback Hotspot"
-    password: "V9VnimloJiK8"
+    password: "***"
 
 captive_portal:
 
@@ -56,13 +53,6 @@ time:
           - lvgl.arc.update:
               id: arc_second
               value: !lambda 'return id(sntp_time).now().second;'
-          # - lvgl.label.update:
-          #     id: label_second
-          #     text: !lambda |-
-          #       static char time_buf[16];
-          #       auto now = id(sntp_time).now();            
-          #       snprintf(time_buf, sizeof(time_buf), "%02d", now.second);
-          #       return time_buf;
 
           - lvgl.arc.update:
               id: arc_minute
@@ -329,25 +319,10 @@ color:
     hex: "272828"
   - id: light_grey_color
     hex: "575858"
-
-  # Green Colors
-  - id: mid_green_color
-    hex: "526d38"
-
-  # Blue Colors
-  - id: mid_blue_color
-    hex: "455d7c"
-
-  # Orange Colors
-  - id: ice_orange_color
-    hex: "ef9c5d"
-  - id: dark_orange_color
-    hex: "5f3e25"
   - id: ha_amber
     hex: "f86f15"
   - id: m5_orange
     hex: "ff860b"
-
   - id: my_red
     red: 100%
     green: 3%
@@ -376,84 +351,6 @@ color:
     blue: 89%
 
 font:
-  - file: "fonts/materialdesignicons-webfont.ttf"
-    id: icons_50
-    size: 50
-    bpp: 4
-    glyphs: [
-      "\U000F0594", # clear-night
-      "\U000F0590", # cloudy
-      "\U000F0F2F", # exceptional
-      "\U000F0591", # fog
-      "\U000F0592", # hail
-      "\U000F0593", # lightning
-      "\U000F067E", # lightning-rainy
-      "\U000F0595", # partlycloudy
-      "\U000F0596", # pouring
-      "\U000F0597", # rainy
-      "\U000F0598", # snowy
-      "\U000F067F", # snowy-rainy
-      "\U000F0599", # sunny
-      "\U000F059D", # windy
-      "\U000F059E", # windy-variant
-      "\U000F14E4", # sunny-off
-      ]
-
-  - file: "fonts/materialdesignicons-webfont.ttf"
-    id: icons_autom
-    size: 100
-    bpp: 4
-    glyphs: [
-      "\U000F0839", # mdi-tv
-      "\U000F0594", # mdi-night
-      "\U000F07D1", # mdi-ha
-      ]
-
-  - file: "fonts/materialdesignicons-webfont.ttf"
-    id: icons_test
-    size: 40
-    bpp: 4
-    glyphs: [
-      "\U000F04AB", # mdi-back
-      "\U000F040E", # mdi-pp
-      "\U000F04AC", # mdi-forward
-      ]      
-
-  - file: "fonts/materialdesignicons-webfont.ttf"
-    id: icons_other
-    size: 30
-    bpp: 4
-    glyphs: [
-      "\U000F07D1", # mdi-ha
-      "\U000F05A9", # mdi-wifi
-      ]
-
-  # - file: "gfonts://Archivo Black"
-  #   id: font2
-  #   size: 50
-
-  - file: "gfonts://Concert One"
-    id: font1
-    size: 50
-
-  - file: "gfonts://Concert One"
-    id: font3
-    size: 25
-
-  - file: "fonts/Inter-Regular.otf"
-    id: font11
-    size: 25
-    bpp: 4  
-
-  - file: "fonts/Roboto-Bold.ttf"
-    id: font12
-    size: 35
-    bpp: 4
-
-  - file: "fonts/Roboto-Bold.ttf"
-    id: font1_1
-    size: 80
-
   - file: "gfonts://Orbitron@700"
     id: font_hour
     size: 66

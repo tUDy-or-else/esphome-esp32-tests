@@ -2,7 +2,7 @@ This repo contains a few things you can do for fun with esp32/round display devi
 
 I am not a programmer, so please bear that in mind.
 
-I do not take full credit for what you will find here, as parts of code were found freely on the internet, either from official tutorials or other open-source places.
+I do not take full credit for what you will find here, as parts of code were mine, AI generated (to a point) or found freely on the internet, either from official tutorials or other open-source places.
 
 Devices used so far:
 - Waveshare ESP32-S3-LCD-1.28 (non-touch)

@@ -219,26 +219,6 @@ lvgl:
             end_angle: 360
             rotation: 270
 
-        - arc:
-            id: arc_minute          
-            width: 230
-            height: 230
-            align: CENTER
-            arc_width: 8
-            arc_rounded: false
-            indicator:
-              arc_color: 0x2979FF
-              arc_rounded: false
-              arc_width: 8
-            value: 0
-            min_value: 0
-            max_value: 60
-            adjustable: false
-            start_angle: 0
-            end_angle: 360
-            rotation: 270
-            hidden: true
-
         - meter:
             align: CENTER
             height: 240
@@ -260,27 +240,6 @@ lvgl:
                   count: 13
                   length: 17
                   color: 0x000000              
-
-        # - meter:
-        #     align: CENTER
-        #     height: 230
-        #     width: 230
-        #     bg_opa: TRANSP
-        #     border_width: 0
-        #     border_color: 0x000000
-        #     border_opa: 0%
-        #     pad_all: 0
-        #     text_opa: 0%
-        #     scales:
-        #       - range_from: 0
-        #         range_to: 30
-        #         angle_range: 360
-        #         rotation: 270
-        #         ticks:
-        #           width: 3
-        #           count: 13
-        #           length: 10
-        #           color: 0x000000
 
         - obj:                             
             height: 20
@@ -312,26 +271,8 @@ lvgl:
                hidden: false
 
 color:
-  - id: white_color
-    hex: "FFFFFF"
   - id: very_dark_grey_color
     hex: "272828"
-  - id: light_grey_color
-    hex: "575858"
-
-  # Green Colors
-  - id: mid_green_color
-    hex: "526d38"
-
-  # Blue Colors
-  - id: mid_blue_color
-    hex: "455d7c"
-
-  # Orange Colors
-  - id: ice_orange_color
-    hex: "ef9c5d"
-  - id: dark_orange_color
-    hex: "5f3e25"
   - id: ha_amber
     hex: "f86f15"
   - id: m5_orange
@@ -365,84 +306,6 @@ color:
     blue: 89%
 
 font:
-  - file: "fonts/materialdesignicons-webfont.ttf"
-    id: icons_50
-    size: 50
-    bpp: 4
-    glyphs: [
-      "\U000F0594", # clear-night
-      "\U000F0590", # cloudy
-      "\U000F0F2F", # exceptional
-      "\U000F0591", # fog
-      "\U000F0592", # hail
-      "\U000F0593", # lightning
-      "\U000F067E", # lightning-rainy
-      "\U000F0595", # partlycloudy
-      "\U000F0596", # pouring
-      "\U000F0597", # rainy
-      "\U000F0598", # snowy
-      "\U000F067F", # snowy-rainy
-      "\U000F0599", # sunny
-      "\U000F059D", # windy
-      "\U000F059E", # windy-variant
-      "\U000F14E4", # sunny-off
-      ]
-
-  - file: "fonts/materialdesignicons-webfont.ttf"
-    id: icons_autom
-    size: 100
-    bpp: 4
-    glyphs: [
-      "\U000F0839", # mdi-tv
-      "\U000F0594", # mdi-night
-      "\U000F07D1", # mdi-ha
-      ]
-
-  - file: "fonts/materialdesignicons-webfont.ttf"
-    id: icons_test
-    size: 40
-    bpp: 4
-    glyphs: [
-      "\U000F04AB", # mdi-back
-      "\U000F040E", # mdi-pp
-      "\U000F04AC", # mdi-forward
-      ]      
-
-  - file: "fonts/materialdesignicons-webfont.ttf"
-    id: icons_other
-    size: 30
-    bpp: 4
-    glyphs: [
-      "\U000F07D1", # mdi-ha
-      "\U000F05A9", # mdi-wifi
-      ]
-
-  # - file: "gfonts://Archivo Black"
-  #   id: font2
-  #   size: 50
-
-  - file: "gfonts://Concert One"
-    id: font1
-    size: 50
-
-  - file: "gfonts://Concert One"
-    id: font3
-    size: 25
-
-  - file: "fonts/Inter-Regular.otf"
-    id: font11
-    size: 25
-    bpp: 4  
-
-  - file: "fonts/Roboto-Bold.ttf"
-    id: font12
-    size: 35
-    bpp: 4
-
-  - file: "fonts/Roboto-Bold.ttf"
-    id: font1_1
-    size: 80
-
   - file: "gfonts://Orbitron@700"
     id: font_hour
     size: 66
